@@ -1,0 +1,13 @@
+src/
+examples/
+docs/
+config/
+*.md
+!README.md
+.github/
+.env
+.env.*
+tsconfig.json
+.editorconfig
+.gitattributes
+

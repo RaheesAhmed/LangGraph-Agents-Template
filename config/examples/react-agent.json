@@ -1,0 +1,57 @@
+{
+  "name": "ReAct Agent",
+  "description": "Standard reasoning and acting agent",
+  "pattern": "react",
+  "systemPrompt": "You are a helpful AI assistant that can use tools to accomplish tasks. Think step by step and use the available tools when needed.",
+  "model": {
+    "provider": "anthropic",
+    "modelName": "claude-sonnet-4-5-20250929",
+    "temperature": 0.7
+  },
+  "streaming": {
+    "enabled": true,
+    "modes": ["updates", "messages", "custom"],
+    "includeSubgraphs": false
+  },
+  "tools": {
+    "enabled": true,
+    "enabledTools": ["calculator", "web-search"],
+    "parallel": false,
+    "maxRetries": 3,
+    "visibility": true,
+    "mcpServers": [],
+    "useMCPTools": false
+  },
+  "memory": {
+    "shortTerm": {
+      "enabled": true,
+      "maxMessages": 10,
+      "trimStrategy": "sliding"
+    },
+    "longTerm": {
+      "enabled": false
+    }
+  },
+  "persistence": {
+    "backend": "memory"
+  },
+  "humanInLoop": {
+    "enabled": false,
+    "triggerConditions": ["critical_action"],
+    "timeout": 300000
+  },
+  "thinking": {
+    "enabled": true,
+    "visible": true,
+    "structured": true
+  },
+  "retryPolicy": {
+    "maxAttempts": 3,
+    "initialInterval": 1000,
+    "backoffMultiplier": 2,
+    "maxInterval": 10000
+  },
+  "maxIterations": 15,
+  "verbose": false
+}
+

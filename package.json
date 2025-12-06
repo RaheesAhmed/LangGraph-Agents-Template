@@ -1,0 +1,62 @@
+{
+  "name": "langgraph-agent-template",
+  "version": "1.0.0",
+  "description": "Build LangGraph agents by editing JSON. 4 patterns (ReAct, Reflection, Planning, Multi-Agent), streaming, MCP support, REST API. Zero code changes needed.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RaheesAhmed/LangGraph-Agents-Template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RaheesAhmed/LangGraph-Agents-Template/issues"
+  },
+  "homepage": "https://github.com/RaheesAhmed/LangGraph-Agents-Template#readme",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "api:start": "tsx api-server.ts",
+    "api:dev": "tsx --watch api-server.ts",
+    "example:basic": "tsx examples/basic-usage.ts",
+    "example:streaming": "tsx examples/streaming-demo.ts",
+    "example:human-loop": "tsx examples/human-loop-demo.ts",
+    "example:multi-agent": "tsx examples/multi-agent-demo.ts",
+    "example:api-client": "tsx examples/api-client.ts"
+  },
+  "keywords": [
+    "langgraph",
+    "langchain",
+    "ai-agent",
+    "llm",
+    "typescript",
+    "react-agent",
+    "multi-agent",
+    "mcp",
+    "model-context-protocol",
+    "streaming",
+    "chatbot",
+    "anthropic",
+    "openai"
+  ],
+  "author": "Rahees Ahmed",
+  "license": "MIT",
+  "dependencies": {
+    "@langchain/anthropic": "^1.2.3",
+    "@langchain/community": "^1.0.7",
+    "@langchain/core": "^1.1.4",
+    "@langchain/langgraph": "^1.0.4",
+    "@langchain/mcp-adapters": "^1.0.3",
+    "@langchain/openai": "^1.1.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.18.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.0",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.5"
+  }
+}
