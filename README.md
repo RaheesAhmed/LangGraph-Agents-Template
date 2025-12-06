@@ -251,8 +251,6 @@ DATABASE_URL=postgresql://...  # Optional
 PORT=3000                      # API server port
 ```
 
-## Project Structure
-
 ```
 src/
 ├── api/         # REST API endpoints
